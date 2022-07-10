@@ -4,9 +4,11 @@ public class Rectangle extends Shape{
  
 	double height;
 	double width;
+	double perimeter;
+	static String shapetype = "Rectangle";
 	
 	public Rectangle(String color,double height,double width) {
-		super(color);
+		super(color,shapetype);
 		this.height = height;
 		this.width  = width;
 			
@@ -14,20 +16,27 @@ public class Rectangle extends Shape{
 	
 	@Override
 	public double calculateArea() {
-		
-		return this.height*this.width;
+		super.area = this.height*this.width;
+		return super.area;
 	}
 	
 	@Override
     public double calculatePerimeter() {
 		
-		return (2*this.width)+(2*this.height);
+		this.perimeter = (2*this.width)+(2*this.height);
+		super.perimeter = this.perimeter ;
+		return super.perimeter;
 	}
 	
 	@Override
-    public void display() {
+	public void drawShape() {
+			
+	    	System.out.println("This shape is "+super.type);
+	}
+	  
+    public void displayDetail() {
 		
-    	System.out.println("This is Rectnagle Shape and Color is :"+super.color);
+    	System.out.println("This shape Color is :"+super.color);
 	}
 	
 	

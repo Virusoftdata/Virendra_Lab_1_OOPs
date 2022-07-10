@@ -3,9 +3,13 @@ package com.shape.oopLab1;
 public class Shape {
 
 	String color;
+	public double area;
+	public double perimeter;
+	String type;
 	
-	public Shape(String color) {
+	public Shape(String color,String shapetype) {
 		this.color = color;
+		this.type = shapetype;
 	}
 	
 	public double calculateArea() {
@@ -18,9 +22,9 @@ public class Shape {
     	return 0;
 	}
 	
-    public void display() {
+    public void drawShape() {
 		
-    	System.out.println("This is Shape Color is"+this.color);
+    	System.out.println("This shape is "+this.type);
 	}
 	
 }

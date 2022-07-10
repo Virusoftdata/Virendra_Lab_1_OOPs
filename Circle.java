@@ -6,25 +6,32 @@ public class Circle extends Shape{
 	final double pi = 3.14;
 	
 	public Circle(String color,double radius) {
-		super(color);
+		super(color,"Circle");
 		this.radius = radius;
 	}
 	
 	@Override
 	public double calculateArea() {
 		
-		return this.pi*this.radius*this.radius;
+		super.area = this.pi*this.radius*this.radius;
+		return super.area;
 	}
 	
 	@Override
     public double calculatePerimeter() {
 		
-		return 2*this.pi*this.radius;
+		super.perimeter = 2*this.pi*this.radius;
+		return super.perimeter ;
 	}
 	
 	@Override
-    public void display() {
+	public void drawShape() {
+			
+	    	System.out.println("This shape is "+super.type);
+	}
+
+    public void displayDetail() {
 		
-    	System.out.println("This is Circle Shape and Color is :"+super.color);
+    	System.out.println("This shape color is :"+super.color);
 	}
 }
